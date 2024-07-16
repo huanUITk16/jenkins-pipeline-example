@@ -15,10 +15,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'hello-world'
-                // dir("/var/lib/jenkins/workspace/New_demo/my-app/") {
-                // sh 'mvn -B -DskipTests clean package'
-                // }
+                 dir("C:\ProgramData\Jenkins\.jenkins\workspace\test-cicd\my-app") {
+                 sh 'mvn -B -DskipTests clean package'
+                 }
             
             }
         }
